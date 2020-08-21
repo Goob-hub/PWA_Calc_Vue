@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Dosis&display=swap');
+
+:root{
+     --ff1: 'Dosis', sans-serif;
+     --ff2: 'Cutive Mono', monospace;
+     
+     --clrDark: #191654;
+     --clrLight: #43c6ac;
+     --clr3: #cecece;
+     --navbgclr: rgba(206,206,206, .9);
+     --txtclr: black;
+     --navBtnClr: black;
+     
+     --gradient: linear-gradient(45deg, #191654, #43C6AC);
+
+    
+
+
+}
+
+
+.hide{
+    transform: translateX(100%);
+    opacity: 0;
+    position: absolute;
+    z-index: 60;
+}
+
+
+
