@@ -139,7 +139,7 @@ $bp-xxlarge: 160em; // 2560px
 
 }
 
-@media(min-width: $bp-small) and (min-height: $bp-small){
+@media(min-width: $bp-small) and (min-height: $bp-xsmall){
      .history{
           .container{
                ul{

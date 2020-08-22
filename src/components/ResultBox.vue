@@ -21,7 +21,8 @@ $bp-xlarge: 120em; // 1920px
 $bp-xxlarge: 160em; // 2560px
 
 .results{
-     margin: .5em;
+     width: 100%;
+     margin-bottom: .5em;
      height: 3em;
      display: flex;
      justify-content: flex-end;

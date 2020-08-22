@@ -300,7 +300,7 @@ main{
  box-shadow: 1px 4px 15px 0px rgba(0,0,0,0.29);
 }
 
-@media(min-width: $bp-small) and (min-height: $bp-small){
+@media(min-width: $bp-small) and (min-height: $bp-xsmall){
   .calculator{
     font-size: 1.6em;
     max-width: 80%;

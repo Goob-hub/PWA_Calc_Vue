@@ -191,7 +191,7 @@ $bp-xxlarge: 160em; // 2560px
           
 }
 
-@media(min-height: $bp-small) and (min-width: $bp-small){
+@media(min-width: $bp-small) and (min-height: $bp-xsmall){
           #cover{
                .menu-btn{
                     font-size: 3em;
