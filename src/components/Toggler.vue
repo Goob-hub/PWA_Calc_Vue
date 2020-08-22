@@ -128,7 +128,7 @@ $bp-xxlarge: 160em; // 2560px
      }
 }
 
-@media(min-width: $bp-small){
+@media(min-width: $bp-small) and (min-height: $bp-small){
      .toggle{
           height: 5em;
           width: 9em;

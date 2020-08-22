@@ -181,11 +181,17 @@ $bp-xxlarge: 160em; // 2560px
                          }
                     }
                }
+               .selected{
+                    border: 3px solid var(--txtclr);
+                    height: 3em;
+                    width: 3em;
+               }
+               
           }
           
 }
 
-@media(min-width: $bp-small){
+@media(min-height: $bp-small) and (min-width: $bp-small){
           #cover{
                .menu-btn{
                     font-size: 3em;
@@ -205,6 +211,11 @@ $bp-xxlarge: 160em; // 2560px
                               width: 5em;
                          }
                     }
+               }
+               .selected{
+                    border: 5px solid var(--txtclr);
+                    height: 5em;
+                    width: 5em;
                }
           }
           
@@ -230,6 +241,11 @@ $bp-xxlarge: 160em; // 2560px
                               width: 8em;
                          }
                     }
+               }
+               .selected{
+                    border: 8px solid var(--txtclr);
+                    height: 8em;
+                    width: 8em;
                }
           }
           

@@ -128,7 +128,7 @@ nav{
      }
 }
 
-@media(min-width: $bp-small){
+@media(min-width: $bp-small) and (min-height: $bp-small){
      .nav-container{
           margin-bottom: 2em;
           justify-self: flex-start;

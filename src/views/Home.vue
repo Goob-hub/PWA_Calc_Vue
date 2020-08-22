@@ -300,7 +300,7 @@ main{
  box-shadow: 1px 4px 15px 0px rgba(0,0,0,0.29);
 }
 
-@media(min-width: $bp-small), (min-height: $bp-small){
+@media(min-width: $bp-small) and (min-height: $bp-small){
   .calculator{
     font-size: 1.6em;
     max-width: 80%;
@@ -313,7 +313,7 @@ main{
   }
 }
 
-@media(min-width: $bp-medium), (max-width: $bp-large){
+@media(min-width: $bp-medium) and (max-width: $bp-large){
   .calculator{
     margin-top: 8em;
   }
