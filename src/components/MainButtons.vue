@@ -69,7 +69,7 @@ export default {
           }
      },
      methods:{
-          //Misc functions
+          //Misc functionss
           addEvents(){ 
                setTimeout(() => {
                     let operatorBtns = document.querySelectorAll(".operator");
