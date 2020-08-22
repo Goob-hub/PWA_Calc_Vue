@@ -287,6 +287,7 @@ main{
   justify-content: center;
   align-items: center;
   font-size: 1.5em;
+  text-align: center;
   background: var(--clrLight);
   color: black;
    &:hover, &:focus{
