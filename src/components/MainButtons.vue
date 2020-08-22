@@ -112,16 +112,26 @@ export default {
                });
           },
           inputNum(num, btnName){
-               
-                    let resultBox = document.querySelector(".results").childNodes[0];
-
-                    (this.solved) ? (this.clear()) : '';
-
-                    (resultBox.textContent === '0' ) ? resultBox.textContent = num : resultBox.textContent += num;
+               this.catchErr();
+               let resultBox = document.querySelector(".results").childNodes[0];
+                    if(!this.err){
+                         (this.solved) ? (this.clear()) : '';
      
-                    (resultBox.textContent === '0' && btnName === 'zero')? '': this.equation.textContent += ` ${num}`;
+                         (resultBox.textContent === '0' ) ? resultBox.textContent = num : resultBox.textContent += num;
+          
+                         (resultBox.textContent === '0' && btnName === 'zero')? '': this.equation.textContent += ` ${num}`;
+                    }
 
                     
+
+          },
+          catchErr(){
+               let resultBox = document.querySelector(".results").childNodes[0];
+               if(resultBox.textContent.length >= 14){
+                    this.err = true;
+                    resultBox.textContent = 'err';
+                    this.equation.textContent = 'err';
+               }
 
           },
           storeDataLocally(){
@@ -150,6 +160,7 @@ export default {
                     this.inputMem.length = 0;
                     this.end = '';
                     this.beg = '';
+                    this.err = false;
           },
           checkEquationTxt(char, isModifier, num = 0, modifier){
                let resultBox = document.querySelector(".results").childNodes[0];
@@ -343,8 +354,7 @@ export default {
                if(!isNaN(result)){
                     this.checkEquationTxt('', true, num, 'sqrt')
                     resultBox.textContent = result;}
-
-               
+               this.solved = true;
                
           },
           invert(){

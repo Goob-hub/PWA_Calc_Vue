@@ -21,7 +21,6 @@ $bp-xlarge: 120em; // 1920px
 $bp-xxlarge: 160em; // 2560px
 
 .results{
-     width: 100%;
      margin-bottom: .5em;
      height: 3em;
      display: flex;
@@ -32,17 +31,14 @@ $bp-xxlarge: 160em; // 2560px
      overflow: hidden;
      span{
           max-width: 100%;
+          overflow: hidden;
           display: flex;
+          font-size: 2em;
      }
      padding: .5em;
      padding-right: 1.5em;
      color: var(--txtclr);
      font-family: var(--ff1);
-     span{
-          font-size: 2em;
-     }
-     
-     
 }
 
 </style>

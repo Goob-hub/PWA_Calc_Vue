@@ -305,8 +305,9 @@ main{
 
 @media(min-width: $bp-small) and (min-height: $bp-xsmall){
   .calculator{
+    width: max-content;
     font-size: 1.6em;
-    max-width: 80%;
+    max-width: 60%;
     margin-top: 2em;
     justify-self: center;
   }
@@ -319,6 +320,7 @@ main{
 @media(min-width: $bp-medium) and (max-width: $bp-large){
   .calculator{
     margin-top: 8em;
+    max-width: 400px;
   }
 }
 
