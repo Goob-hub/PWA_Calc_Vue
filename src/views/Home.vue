@@ -279,13 +279,9 @@ main{
 }
 
 .solve{
-  height: 1em;
-  display: grid;
-  place-content: center;
   width: 100%;
-  padding: 1em;
+  padding: .5em;
   font-size: 1.5em;
-  text-align: center;
   background: var(--clrLight);
   color: black;
    &:hover, &:focus{
