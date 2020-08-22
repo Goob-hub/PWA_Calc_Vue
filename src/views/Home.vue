@@ -245,6 +245,8 @@ $bp-xxlarge: 160em; // 2560px
 }
 
 .equation{
+  max-width: 100%;
+  max-height: 5%;
   position: absolute;
   top: -1.5em;
   right: .9em;
@@ -252,6 +254,7 @@ $bp-xxlarge: 160em; // 2560px
   font-weight: bold;
   align-self: flex-start;
   color: var(--txtclr);
+  overflow: hidden;
 }
         
 main{

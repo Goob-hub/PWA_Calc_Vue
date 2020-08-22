@@ -27,13 +27,15 @@ $bp-xxlarge: 160em; // 2560px
      display: flex;
      justify-content: flex-end;
      align-items: baseline;
-     max-width: 240px;
+     max-width: 100%;
      max-height: 100px;
+     overflow: hidden;
      span{
-          max-width: 240px;
+          max-width: 100%;
           display: flex;
      }
      padding: .5em;
+     padding-right: 1.5em;
      color: var(--txtclr);
      font-family: var(--ff1);
      span{
@@ -43,9 +45,4 @@ $bp-xxlarge: 160em; // 2560px
      
 }
 
-@media(min-width: $bp-small){
-     .results{
-          max-width: 100%;
-     }
-}
 </style>
