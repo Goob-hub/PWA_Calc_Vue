@@ -189,24 +189,38 @@ export default {
                     switch (modifier) {
                          case 'invert':
                               if(this.solved === true){
-                                   this.equation.textContent = (parseFloat(resultBox.textContent) * -1).toString();
+                                   this.storeDataLocally();
+                                   setTimeout(() => {
+                                        this.equation.textContent = resultBox.textContent;     
+                                   });
+                                   this.solved = false;
+                                   this.end = '';
+                                   this.beg = '';
                               } else {
                                    if(this.end.includes('√')) {
                                         (this.end.includes('-')) ?
                                          (this.end = this.end.replace('-', ''),
                                          this.end = this.end.replace('(', ''),
-                                         this.end = this.end.replace(')', '')) : this.end = `- (${this.end})`
+                                         this.end = this.end.replace(')', '')) : this.end = `(-${this.end})`, console.log(this.end)
                                    } else {
                                         this.end = (num * -1).toString();
                                    }
+                                   
                               }
                               if(!isNaN(num))
                               equation.textContent = `${this.beg} ${this.end}`;
                               break;
                          case 'sqrt':
-                              this.end = `√ ${num}`; 
-                              if(!isNaN(num))
-                              equation.textContent = `${this.beg} ${this.end}`;
+                              if(this.solved === true){
+                                   this.storeDataLocally();
+                                   this.equation.textContent = `√ ${resultBox.textContent}`; 
+                                   this.solved = true;
+                              } else {
+
+                                   this.end = `√ ${num}`; 
+                                   if(!isNaN(num))
+                                   equation.textContent = `${this.beg} ${this.end}`;
+                              }
                               break;
                          default:
                               console.log('err at MainButtons.vue line 186');
@@ -315,6 +329,7 @@ export default {
                     if(!isNaN(result) && result !== 0){
                     this.equation.textContent += ' x .01'
                     resultBox.textContent = result;}
+                    this.decimalCalled = true;
                });
 
           },
@@ -329,7 +344,7 @@ export default {
                     this.checkEquationTxt('', true, num, 'sqrt')
                     resultBox.textContent = result;}
 
-               this.solved = true;
+               
                
           },
           invert(){
@@ -346,7 +361,7 @@ export default {
                let equation = document.querySelector(".equation");
                let length = this.equation.textContent.length;
                
-               if(!this.decimalCalled){
+               if(!this.decimalCalled && !this.equation.textContent.includes('.')){
                     (equation.textContent[length - 1] === '.') ? '' : ( equation.textContent === '') ? equation.textContent = '0.': (!this.solved) ? this.checkEquationTxt('.', false) : '';
      
                     (resultBox.textContent === '') ? resultBox.textContent += '0.' : resultBox.textContent += '.';
