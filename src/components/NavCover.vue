@@ -155,6 +155,8 @@ $bp-xxlarge: 160em; // 2560px
 
      .selected{
           border: 3px solid var(--txtclr);
+          height: 4em;
+          width: 4em;
      }
      
 }

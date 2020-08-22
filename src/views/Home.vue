@@ -7,7 +7,7 @@
         <section class="equation"></section>
         <ResultBox />
         <MainButtons />
-        <button class="solve btn">=</button>
+        <button class="solve btn"><p>=</p></button>
       </div>
     </main>
   </div>
@@ -279,13 +279,11 @@ main{
 }
 
 .solve{
+  height: 1em;
+  display: grid;
+  place-content: center;
   width: 100%;
-  max-height: 1.5em;
-  max-width: 80vw;
   padding: 1em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 1.5em;
   text-align: center;
   background: var(--clrLight);
